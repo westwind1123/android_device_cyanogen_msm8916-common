@@ -49,7 +49,7 @@ on enable-low-power
     write /sys/devices/system/cpu/cpu4/cpufreq/interactive/timer_rate 40000
     write /sys/devices/system/cpu/cpu4/cpufreq/interactive/hispeed_freq 200000
     write /sys/devices/system/cpu/cpu4/cpufreq/interactive/io_is_busy 0
-    write /sys/devices/system/cpu/cpu4/cpufreq/interactive/target_loads "70 249600:75 499200:80 800000:85 998400:95 1113600:99"
+    write /sys/devices/system/cpu/cpu4/cpufreq/interactive/target_loads "70 249600:70 499200:70 800000:80 998400:90 1113600:95"
     write /sys/devices/system/cpu/cpu4/cpufreq/interactive/min_sample_time 40000
     write /sys/devices/system/cpu/cpu4/cpufreq/scaling_min_freq 200000
     write /sys/devices/system/cpu/cpu4/cpufreq/interactive/fast_ramp_down 1
@@ -61,10 +61,10 @@ on enable-low-power
     # Enable core control
     write /sys/devices/system/cpu/cpu0/core_ctl/min_cpus 0
     write /sys/devices/system/cpu/cpu0/core_ctl/max_cpus 4
-    write /sys/devices/system/cpu/cpu0/core_ctl/busy_up_thres 92
+    write /sys/devices/system/cpu/cpu0/core_ctl/busy_up_thres 90
     write /sys/devices/system/cpu/cpu0/core_ctl/busy_down_thres 77
     write /sys/devices/system/cpu/cpu0/core_ctl/offline_delay_ms "400 400 100 100"
-    write /sys/devices/system/cpu/cpu0/core_ctl/online_delay_ms "1000 5000 6000 6000"
+    write /sys/devices/system/cpu/cpu0/core_ctl/online_delay_ms "1000 3000 3000 3000"
     write /sys/devices/system/cpu/cpu0/core_ctl/task_thres 4
     write /sys/devices/system/cpu/cpu0/core_ctl/is_big_cluster 1
     write /sys/devices/system/cpu/cpu0/core_ctl/not_preferred "1 1 1 1"
